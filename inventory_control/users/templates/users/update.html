@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Atualização de cadastro de usuário{% endblock %}
+{% block content %}
+    <h2 class="mb-3">Edição de Usuários</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% include "partials/_submit_button.html" %}
+    </form>
+{% endblock %}
